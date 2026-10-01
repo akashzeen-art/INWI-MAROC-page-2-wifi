@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -19,6 +19,15 @@
     <div class="orb orb-2" aria-hidden="true"></div>
     <div class="orb orb-3" aria-hidden="true"></div>
 
+    <!-- Language dropdown -->
+    <div class="lang-wrapper">
+      <button class="lang-drop-btn" id="langDropBtn">AR ▾</button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option active" data-lang="ar">العربية</button>
+        <button class="lang-option" data-lang="fr">Français</button>
+      </div>
+    </div>
+
     <div class="phone-scroll">
 
       <main class="screen">
@@ -33,7 +42,11 @@
           <span class="corner bl" aria-hidden="true"></span>
           <span class="corner br" aria-hidden="true"></span>
 
-          <h1 class="main-heading">Votre code<br>d'activation a été<br><span>envoyé !</span></h1>
+          <h1 class="main-heading">
+            <span data-i18n="heading-w2-line1">تم إرسال</span><br>
+            <span data-i18n="heading-w2-line2">رمز التفعيل</span><br>
+            <span class="heading-accent" data-i18n="heading-w2-span">بنجاح !</span>
+          </h1>
 
           <div class="divider" aria-hidden="true">
             <span class="div-line"></span>
@@ -41,7 +54,7 @@
             <span class="div-line"></span>
           </div>
 
-          <p class="instruction italic">Saisissez votre code reçu<br>par SMS</p>
+          <p class="instruction italic" data-i18n="instruction-w2">أدخل الرمز المستلم عبر SMS</p>
 
           <div class="otp-card">
             <input
@@ -57,13 +70,15 @@
           <p class="error-message" id="err-pin" hidden></p>
 
           <button type="button" class="btn-confirm" id="btn-confirm" disabled>
-            <span class="btn-text">CONFIRMER</span>
+            <span class="btn-text" data-i18n="btn-w2-confirm">تأكيد</span>
             <span class="btn-spinner" id="btnSpinner" aria-hidden="true"></span>
           </button>
 
           <div class="sub-block">
-            <p class="sub-info">Abonnement sans engagement <strong>7.5MAD/J</strong></p>
-            <a href="#" id="resend-pin" class="resend-link">↺ Renvoyer le code</a>
+            <p class="sub-info">
+              <span data-i18n="sub-info-w2">اشتراك بدون التزام</span> <strong>7.5MAD/J</strong>
+            </p>
+            <a href="#" id="resend-pin" class="resend-link" data-i18n="resend-w2">↺ إعادة إرسال الرمز</a>
           </div>
         </div>
 
@@ -78,6 +93,7 @@
   </div><!-- /phone-shell -->
 
   <script src="script.js"></script>
+  <script src="lang.js"></script>
   <script>
     (function () {
       var url = new URL(window.location.href);

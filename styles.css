@@ -114,7 +114,208 @@ body {
   padding: 18vh 20px 48px;
 }
 
-/* ── Top badge / logo ── */
+/* ── Language dropdown ── */
+.lang-wrapper {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 10;
+}
+
+[dir="rtl"] .lang-wrapper {
+  left: auto;
+  right: 14px;
+}
+
+.lang-drop-btn {
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(124,58,237,0.55);
+  border: 1px solid rgba(159,103,255,0.5);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s;
+}
+
+.lang-drop-btn:hover {
+  background: rgba(124,58,237,0.75);
+}
+
+.lang-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 110px;
+  background: rgba(15,10,40,0.92);
+  border: 1px solid rgba(159,103,255,0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+[dir="rtl"] .lang-menu {
+  left: auto;
+  right: 0;
+}
+
+.lang-menu.open {
+  display: flex;
+}
+
+.lang-option {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+[dir="rtl"] .lang-option { text-align: right; }
+
+.lang-option:hover {
+  background: rgba(124,58,237,0.25);
+  color: #fff;
+}
+
+.lang-option.active {
+  color: var(--c-light);
+  font-weight: 700;
+  background: rgba(6,182,212,0.1);
+}
+
+/* ── Heading accent span ── */
+.heading-accent {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--v-light), var(--c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.heading-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--v), var(--c));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineGrow 0.7s 0.5s ease forwards;
+}
+
+
+/* ── Language dropdown ── */
+.lang-wrapper {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 10;
+}
+
+[dir="rtl"] .lang-wrapper {
+  left: auto;
+  right: 14px;
+}
+
+.lang-drop-btn {
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(124,58,237,0.55);
+  border: 1px solid rgba(159,103,255,0.5);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s;
+}
+
+.lang-drop-btn:hover { background: rgba(124,58,237,0.75); }
+
+.lang-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 110px;
+  background: rgba(15,10,40,0.92);
+  border: 1px solid rgba(159,103,255,0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+[dir="rtl"] .lang-menu { left: auto; right: 0; }
+
+.lang-menu.open { display: flex; }
+
+.lang-option {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+[dir="rtl"] .lang-option { text-align: right; }
+
+.lang-option:hover { background: rgba(124,58,237,0.25); color: #fff; }
+
+.lang-option.active {
+  color: var(--c-light);
+  font-weight: 700;
+  background: rgba(6,182,212,0.1);
+}
+
+/* ── Heading accent ── */
+.heading-accent {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--v-light), var(--c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.heading-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--v), var(--c));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineGrow 0.7s 0.5s ease forwards;
+}
+
+
 .top-badge {
   display: flex;
   align-items: center;
