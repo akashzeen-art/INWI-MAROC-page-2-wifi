@@ -130,9 +130,9 @@ body {
   object-fit: contain;
   display: block;
   filter:
-    drop-shadow(0 0 14px rgba(124,58,237,0.7))
-    drop-shadow(0 0 6px rgba(6,182,212,0.5))
-    brightness(1.1);
+    drop-shadow(0 0 6px rgba(124,58,237,0.35))
+    drop-shadow(0 0 3px rgba(6,182,212,0.25))
+    brightness(1.05);
 }
 
 /* ── Card ── */
